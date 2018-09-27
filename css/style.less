@@ -1,0 +1,121 @@
+/********************
+Arquivo de estilos base do site
+  - Importação de folha de estilo de normalização (normalize.css)
+  - Importação de componentes do site
+  - Definição dos elementos estruturantes do site
+********************/
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css";
+@import "menu-principal.css";
+@import "form-pesquisa.css";
+@import "destaque-artigo.css";
+@import "box-rodape.css";
+
+/*********************
+Fontes
+*********************/
+@font-face {
+  font-family: 'DK Cinnabar Brush';
+  src: url('../fonts/DK Cinnabar Brush.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.container {
+  padding: 20px 150px;
+  font-family: Montserrat, sans-serif;
+}
+
+.principal {
+  background-image: url("../img/main4.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.cabecalho {
+  display: inline-flex;
+  height: 55px;
+  display: flex;
+
+  > a > .imglogo{
+	width: 60px;
+	align-self: center;
+  }  
+}
+
+
+.form-pesquisa {
+  display: flex;
+  position: relative;
+  align-self: center;
+
+  > .consulta {
+	padding: 5px 30px 5px 20px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+	border-right: none;
+	margin-left: 60px;
+	height: 26px;
+	width: 160px;
+
+	font-size: 14px;
+	font-weight: 300;
+  }
+
+  > .acao {
+	width: 25px;
+	height: 25px;
+	background: url(//www.devmedia.com.br/imagens/2013/buscar_grey.png) no-repeat #fff;
+	cursor: pointer;
+	border: none;
+	position: absolute;
+	top: 8px;
+	right: 9px;
+  }
+}
+
+.menu-principal{
+  > .lista{
+  display: inline-flex;
+  flex-direction: row;
+
+  font-size: 14px;
+  font-weight: 600;
+  list-style-type: none;
+  }
+
+  > ul > li {
+	margin-right: 20px;
+  }
+}
+
+.conteudo-imagem-principal{
+	font-family: 'DK Cinnabar Brush';
+	
+	color: #FFFFFF;
+	text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	line-height: 1.5;
+
+  > h1 {
+		font-size: 90px;
+		margin: 150px 0 0;
+	}
+	> h2 {
+		font-size: 40px;
+		margin: 0;
+	}
+  
+}
+
+.conteudo {
+  display: block;
+}
+
+.rodape {
+
+}
+
+.copyright {
+
+}
