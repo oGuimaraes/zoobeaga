@@ -10,6 +10,21 @@ Arquivo de estilos base do site
 @import "destaque-artigo.css";
 @import "box-rodape.css";
 
+* {
+	box-sizing: border-box;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		padding: 20px 250px;
+	}
+}
+
 /*********************
 Fontes
 *********************/
@@ -20,15 +35,18 @@ Fontes
   font-style: normal;
 }
 
+body {
+  background-color: #F3F3F3;
+}
+
 b {
 	font-weight: 600;
 }
 
 .container {
-  padding: 20px 110px;
+  padding: 20px 50px;
   font-family: Montserrat, sans-serif;
   color: #4A4F4F;
-  background-color: #F3F3F3;
 }
 
 .principal {
@@ -36,7 +54,7 @@ b {
   background-size: cover;
   height: 100vh;
 }
-	
+
 .cabecalho {
   display: inline-flex;
   height: 55px;
@@ -45,7 +63,7 @@ b {
   > a > .imglogo{
 	width: 60px;
 	align-self: center;
-  }  
+  }
 }
 
 .form-pesquisa {
@@ -85,7 +103,8 @@ b {
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
 	z-index: 2;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.1);
+	
 
   > .lista{
   display: inline-flex;
@@ -105,9 +124,10 @@ b {
   }
 }
 
+
 .conteudo-imagem-principal{
 	font-family: 'DK Cinnabar Brush';
-	
+
 	text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15), 7px 2px 3px rgba(179,191,255,0.37);	text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 	color: whitesmoke;
 	line-height: 1.5;
@@ -120,7 +140,7 @@ b {
 		font-size: 40px;
 		margin: 0;
 	}
-  
+
 }
 
 .descricao {
@@ -131,125 +151,137 @@ b {
 }
 
 .informativo {
-	display: flex;
-	border-radius: 10px;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	background-color: white;
-	padding-top: 15px;
-	-webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+	padding: 20px 50px;
+
+	@media screen and (min-width: 768px) {
+		padding: 20px 110px;
+	}
+
+	.container {
+		display: flex;
+		border-radius: 10px;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		background-color: white;
+		padding: 30px 15px 0;
+
+		-webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-	
-	> .faixa {
+		box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.caixa-informativa {
 		width: 100%;
-		height: 8px;
-		background-color: #F3F3F3;
-		margin-bottom: 15px;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 500px;
 
-
-	> .caixa-informativa:nth-child(1) {
-		
-		> .botao {
-			background-color: #83cb13;
-
-			> a:hover{
-				color: #578016;
-			}
+		@media screen and (min-width: 768px) {
+			width: 30%;
 		}
 
-		> .faixa {
-			width: 100%;
-			height: 8px;
-			background-color:#83cb13;
-		}
-
-		
-	}
-
-
-
-	> .caixa-informativa:nth-child(2) {
-		
-		> .botao {
-			background-color: #ffbd12;
-
-			> a:hover {
-				color: #ac8012;
-			}
-		}
-
-		> .faixa {
-			width: 100%;
-			height: 8px;
-			background-color:#ffbd12;
-		}
-
-	}
-
-	> .caixa-informativa:nth-child(3) {
-		
-		> .botao {
-		background-color: #53bee2;
-
-			> a:hover {
-				color:  #3c869e;
-			}
-		}
-
-		> .faixa {
-			width: 100%;
-			height: 8px;
-			background-color:#53bee2; 
-		}
-
-	}
-
-	> .caixa-informativa {
-		max-width: 30%;
-		display: grid;
-		justify-items: center;
-
-		> .imagem {
+		.imagem {
 			margin: 0;
 			min-height: 155px;
 			height: auto;
 			max-width: 100%;
+			margin-bottom: 20px;
 		}
 
-		> .descricao {
+		.descricao {
 			vertical-align: baseline;
 			font-size: 13px;
 			text-align: center;
-			
 		}
 
-		> .letracursiva {
+		.letracursiva {
 			font-family: 'Clicker Script', cursive;
 			font-size: 36px;
 			font-weight: 200;
 			margin: 0;
 			text-align: center;
 
-			> .textodestaque1{
+			.textodestaque1{
 				color: #83cb13;
 			}
 
-			> .textodestaque2{
+			.textodestaque2{
 				color: #ffbd12;
 			}
 
-			> .textodestaque3{
+			.textodestaque3{
 				color: #53bee2;
 			}
 		}
 
+		.expandir {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+
+			.faixa {
+				width: 100%;
+				height: 8px;
+				background-color: #F3F3F3;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+
+		&:first-child {
+			.botao {
+				background-color: #83cb13;
+
+				a:hover{
+					color: #578016;
+				}
+			}
+
+			.faixa {
+				width: 100%;
+				height: 8px;
+				background-color:#83cb13;
+			}
+		}
+
+		&:nth-child(2) {
+			.botao {
+				background-color: #ffbd12;
+
+				a:hover {
+					color: #ac8012;
+				}
+			}
+
+			.faixa {
+				width: 100%;
+				height: 8px;
+				background-color:#ffbd12;
+			}
+		}
+
+		&:last-child {
+			.botao {
+				background-color: #53bee2;
+
+					a:hover {
+						color:  #3c869e;
+					}
+				}
+
+				.faixa {
+					width: 100%;
+					height: 8px;
+					background-color:#53bee2;
+				}
+		}
+
 		.botao {
 			display: flex;
-			align-self: flex-end;
 			justify-content: center;
 			border: none;
 			border-top-left-radius: 23px * 2;
@@ -277,19 +309,18 @@ b {
 }
 
 .tabela {
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 90%;
-    margin: 0 auto;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 100%;
 	position: relative;
 	text-align: center;
 	padding-top: 15px;
 	-webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
-	
+
 	> thead > tr {
 
 		height: 35px;
@@ -312,7 +343,7 @@ b {
 		color: #fff;
 		font-weight: 300;
 	}
-	
+
 }
 
 .rodape {
@@ -321,7 +352,7 @@ b {
 
 	.box-rodape {
 		vertical-align: top;
-		
+
 		&:first-child{
 			border-right: 1px solid #333333;
     		padding-right: 30px;
@@ -332,7 +363,7 @@ b {
 		}
 
 	}
-	
+
 	.copyright {
 		font-size: 14px;
 	}
